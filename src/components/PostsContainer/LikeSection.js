@@ -4,24 +4,28 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { useState } from "react";
 
 const LikeSection = props => {
+  let [likes, likesIncrease] = useState(0)
   return (
     <div>
       <div
         className="like-section"
         key="likes-icons-container"
       >
-        <div className="like-section-wrapper">
+        <div className="like-section-wrapper" onClick = { () => {
+          likesIncrease(likes + 1);
+          }}>
           <FontAwesomeIcon icon={faHeart} />
         </div>
         <div className="like-section-wrapper">
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className="like-number">27 likes</p>
+  <p className="like-number">{likes} likes</p>
     </div>
   )
 };
-
+console.log(LikeSection)
 export default LikeSection;

@@ -5,6 +5,7 @@
   justify-content: space-evenly;
   align-items: center;
   background: #ffffff;
+  color: grey;
 }
 .search-form {
   width: 150px;
@@ -17,6 +18,7 @@
 
 .logo-image {
   height: 100%;
+  color: black;
 }
 
 .social-wrapper {
